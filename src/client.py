@@ -82,7 +82,7 @@ async def index():
 @app.get("/run-query", response_class=HTMLResponse)
 async def run_query(query: str):
     result = await agent.run(query)
-    return f"<div>{result}</div>"
+    return f'<div class="card">{result}</div>'
 
 if __name__ == "__main__":
     import uvicorn
